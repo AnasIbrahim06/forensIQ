@@ -1,0 +1,126 @@
+{% include 'admin_header.html' %}
+<!-- <body>
+    <h2>Crime list</h2>
+    <table border="1">
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Designation</th>
+            <th>case_num</th>
+            <th>t_of_crime</th>
+            <th>latitude</th>
+            <th>longitude</th>
+            <th>status</th>
+            <th>date</th>
+        </tr>
+        {% for i in data['view'] %}
+        <tr>
+            <td>{{i['f_name']}}</td>
+            <td>{{i['l_name']}}</td>
+            <td>{{i['designation']}}</td>
+            <td>{{i['case_num']}}</td>
+            <td>{{i['type_of_crime']}}</td>
+            <td>{{i['latitude']}}</td>
+            <td>{{i['longitude']}}</td>
+            <td>{{i['status']}}</td>
+            <td>{{i['date']}}</td>
+            <td><a href="/assign_staff(A)?cnum={{i['crime_num']}}">assign staff</a></td>
+        </tr>
+        {% endfor %}
+    </table> -->
+
+
+
+
+
+   
+
+<body>
+    <h2 style="margin-top: 100px;">Crime List</h2>
+    <div class="card-container">
+        {% if data['view'] %}
+            {% for i in data['view'] %}
+            <div class="card">
+                <h3>Case #{{ i['case_num'] }}</h3>
+                <p><strong>First Name:</strong> {{ i['f_name'] }}</p>
+                <p><strong>Last Name:</strong> {{ i['l_name'] }}</p>
+                <p><strong>Designation:</strong> {{ i['designation'] }}</p>
+                <p><strong>Type of Crime:</strong> {{ i['type_of_crime'] }}</p>
+                <p><strong>Latitude:</strong> {{ i['latitude'] }}</p>
+                <p><strong>Longitude:</strong> {{ i['longitude'] }}</p>
+                <p class="status"><strong>Status:</strong> {{ i['status'] }}</p>
+                <p><strong>Date:</strong> {{ i['date'] }}</p>
+                <a href="/assign_staff(A)?cnum={{ i['crime_num'] }}">Assign Staff</a>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p style="text-align: center; color: #777;">No cases available.</p>
+        {% endif %}
+    </div>
+
+
+{% include 'footer.html' %}
+
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+    h2 {
+        text-align: center;
+        color: #444;
+    }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        color: #444;
+    }
+    .card p {
+        margin: 5px 0;
+        color: #666;
+        font-size: 14px;
+    }
+    .card .status {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+    .card a {
+        text-decoration: none;
+        color: #007BFF;
+        font-weight: bold;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+    .card a:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+        .card {
+            width: 100%;
+        }
+    }
+</style>

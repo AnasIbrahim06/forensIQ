@@ -1,0 +1,102 @@
+{% include 'police_header.html' %}
+
+<!-- <body>
+    <h2>Crime list</h2>
+    <table border="1">
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Designation</th>
+            <th>case_num</th>
+            <th>t_of_crime</th>
+            <th>latitude</th>
+            <th>longitude</th>
+            <th>status</th>
+            <th>date</th>
+        </tr>
+        {% for i in data['view'] %}
+        <tr>
+            <td>{{i['f_name']}}</td>
+            <td>{{i['l_name']}}</td>
+            <td>{{i['designation']}}</td>
+            <td>{{i['case_num']}}</td>
+            <td>{{i['type_of_crime']}}</td>
+            <td>{{i['latitude']}}</td>
+            <td>{{i['longitude']}}</td>
+            <td>{{i['status']}}</td>
+            <td>{{i['date']}}</td>
+        </tr>
+        {% endfor %}
+    </table> -->
+
+
+   
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f9;
+                margin: 0;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            h2 {
+                text-align: center;
+                color: #333;
+                margin-bottom: 20px;
+            }
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                width: 100%;
+                max-width: 700px;
+            }
+            .card {
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            .card h3 {
+                margin: 0 0 10px;
+                color: #4CAF50;
+                font-size: 18px;
+            }
+            .card p {
+                margin: 5px 0;
+                color: #555;
+                font-size: 14px;
+            }
+            .card strong {
+                color: #333;
+            }
+        </style>
+   
+    <body>
+        <h2 style="margin-top: 100px;">Crime List</h2>
+        <div class="card-container">
+            {% for i in data['view'] %}
+            <div class="card">
+                <h3>Case Number: {{i['case_num']}}</h3>
+                <p><strong>First Name:</strong> {{i['f_name']}}</p>
+                <p><strong>Last Name:</strong> {{i['l_name']}}</p>
+                <p><strong>Designation:</strong> {{i['designation']}}</p>
+                <p><strong>Type of Crime:</strong> {{i['type_of_crime']}}</p>
+                <p><strong>Latitude:</strong> {{i['latitude']}}</p>
+                <p><strong>Longitude:</strong> {{i['longitude']}}</p>
+                <p><strong>Status:</strong> {{i['status']}}</p>
+                <p><strong>Date:</strong> {{i['date']}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+   
+        
+{% include 'footer.html' %}

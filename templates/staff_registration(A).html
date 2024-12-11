@@ -1,0 +1,262 @@
+{% include 'admin_header.html' %}
+
+<br><br><br>
+        <!-- <h1 align="center"><u>REGISTRATION</u></h1>
+        <table align="center">
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" name="f_n"></td>
+            </tr>
+
+            <tr>
+                <th>Last Name</th>
+                <td><input type="text" name="l_n"></td>
+            </tr>
+
+            <tr>
+                <th>Gender</th>
+                <td><input type="text" name="gen"></td>
+            </tr>
+
+            <tr>
+                <th>Date Of Birth</th>
+                <td><input type="text" name="dob"></td>
+            </tr>
+
+            <tr>
+                <th>State</th>
+                <td><input type="text" name="s_t"></td>
+            </tr>
+            
+            <tr>
+                <th>District</th>
+                <td><input type="text" name="d_t"></td>
+            </tr>
+
+            <tr>
+                <th>City</th>
+                <td><input type="text" name="c_y"></td>
+            </tr>
+
+            <tr>
+                <th>Address</th>
+                <td><input type="text" name="a_s"></td>
+            </tr>
+
+            <tr>
+                <th>Pincode</th>
+                <td><input type="text" name="p_e"></td>
+            </tr>
+
+            <tr>
+                <th>Phone Number</th>
+                <td><input type="text" name="p_r"></td>
+            </tr>
+
+            <tr>
+                <th>Alternative Phone Number</th>
+                <td><input type="text" name="alt_ph"></td>
+            </tr>
+
+            <tr>
+                <th>E-mail</th>
+                <td><input type="text" name="e_l"></td>
+            </tr>
+
+            <tr>
+                <th>Date Of Joining</th>
+                <td><input type="text" name="doj"></td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td><input type="text" name="p_o"></td>
+            </tr>
+
+            <tr>
+                    
+                <th>Username</th>
+                <td><input type="text" name="uname"></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="psw"></td>
+            </tr>
+
+
+            <tr></tr>
+                <td><input type="submit" name="submit"></td>
+            </tr>
+        </table> -->
+
+<!-- 
+        new -->
+
+        
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            text-decoration: underline;
+            margin: 20px 0;
+            font-size: 26px;
+        }
+        form {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+        th {
+            font-weight: bold;
+            color: #34495e;
+            width: 35%;
+        }
+        td {
+            width: 65%;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #3fa057;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            display: block;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #23803d;
+        }
+        @media (max-width: 768px) {
+            form {
+                padding: 15px;
+            }
+            th, td {
+                display: block;
+                width: 100%;
+                padding: 8px 0;
+            }
+            th {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <h1>REGISTRATION</h1>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" name="f_n" required></td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td><input type="text" name="l_n"  required></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td><input type="text" name="gen"  required></td>
+            </tr>
+            <tr>
+                <th>Date Of Birth</th>
+                <td><input type="text" name="dob" required></td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td><input type="text" name="s_t" required></td>
+            </tr>
+            <tr>
+                <th>District</th>
+                <td><input type="text" name="d_t" required></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><input type="text" name="c_y" required></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><input type="text" name="a_s" required></td>
+            </tr>
+            <tr>
+                <th>Pincode</th>
+                <td><input type="text" name="p_e" required></td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td><input type="text" name="p_r" required></td>
+            </tr>
+            <tr>
+                <th>Alternative Phone Number</th>
+                <td><input type="text" name="alt_ph"></td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td><input type="text" name="e_l" required></td>
+            </tr>
+            <tr>
+                <th>Date Of Joining</th>
+                <td><input type="text" name="doj" ></td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td><input type="text" name="p_o" ></td>
+            </tr>
+            <tr>
+       
+                <th>Username</th>
+                <td><input type="text" name="uname" required></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="psw" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+
+
+
+
+{% include 'footer.html' %}

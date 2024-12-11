@@ -1,0 +1,245 @@
+{% include'public_header.html'%}
+<br><br><br>
+<!-- <br><br><br><br><br>
+    <body>
+        <form action="" method="post">
+        <h1 align="center">REGISTRATION</h1>
+        <table align="center">
+            <tr>
+                <th>Station Register Number</th>
+                <td><input type="text" name="sr_num"></td>
+            </tr>
+            <tr>
+                <th>Zone</th>
+                <td><input type="text" name="zone"></td>
+            </tr>
+            <tr>
+                <th>District</th>
+                <td><input type="text" name="D_t"></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><input type="text" name="c_y"></td>
+            </tr>
+            <tr>
+                <th>Pincode</th>
+                <td><input type="text" name="p_c">
+                    
+                    </td>
+            </tr>
+            <tr>
+                <th>Station Name</th>
+                <td><input type="text" name="s_n">
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>Address</th>
+                <td><input type="text" name="address">
+                </td>
+            </tr>
+            
+            <tr>
+                <th>E-mail</th>
+                <td><input type="email" name="e_m">
+                </td>
+            </tr>
+
+            <tr>
+                <th>Phone_Number</th>
+                <td><input type="text" name="p_n">
+                </td>
+            </tr>
+
+            <tr>
+                <th>Alternative Phone_Number</th>
+                <td><input type="text" name="alt_p_n">
+                    </td>
+            </tr>
+              
+            <tr>
+                    
+                <th>Username</th>
+                <td><input type="text" name="uname"></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="psw"></td>
+            </tr>
+
+            
+            <tr>
+                <td><input type="submit" name="submit"></td>
+            </tr>
+            
+
+        </table>
+        </form>    -->
+
+
+
+       <!-- new
+       --- -->
+
+
+
+<body>
+
+    
+    <form action="" method="post">
+        <h1>POLICE REGISTRATION</h1>
+        <table>
+            <tr>
+                <th>Station Register Number</th>
+                <td><input type="text" name="sr_num" required></td>
+            </tr>
+            <tr>
+                <th>Zone</th>
+                <td><input type="text" name="zone" required></td>
+            </tr>
+            <tr>
+                <th>District</th>
+                <td><input type="text" name="D_t" required></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><input type="text" name="c_y" required></td>
+            </tr>
+            <tr>
+                <th>Pincode</th>
+                <td><input type="text" name="p_c" required></td>
+            </tr>
+            <tr>
+                <th>Station Name</th>
+                <td><input type="text" name="s_n" required></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><input type="text" name="address" required></td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td><input type="email" name="e_m" required></td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td><input type="text" name="p_n" required></td>
+            </tr>
+            <tr>
+                <th>Alternative Phone Number</th>
+                <td><input type="text" name="alt_p_n"></td>
+            </tr>
+            <tr>
+
+           
+                <th>Username</th>
+                <td><input type="text" name="uname" required></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="psw" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="submit" value="Register"></td>
+            </tr>
+            </table>
+        </form>
+
+
+
+
+        
+            
+       
+
+
+
+{% include'footer.html'%}
+
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+    }
+    form {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        text-align: left;
+        padding: 10px;
+        vertical-align: top;
+    }
+    th {
+        color: #555;
+        font-weight: bold;
+        width: 40%;
+    }
+    td {
+        width: 60%;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+        margin: 10px auto;
+        display: block;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    tr:last-child td {
+        text-align: center;
+    }
+    @media (max-width: 768px) {
+        table {
+            width: 100%;
+        }
+        th, td {
+            display: block;
+            text-align: left;
+            width: 100%;
+        }
+        th {
+            margin-top: 15px;
+        }
+    }
+
+
+     
+    
+</style>

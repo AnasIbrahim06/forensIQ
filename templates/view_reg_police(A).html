@@ -1,0 +1,106 @@
+{% include 'admin_header.html' %}
+
+
+<body>      
+    <h2 align="center" style="margin-top: 100px;"><u>Registered Police</u></h2>
+    <table border="1">
+        <tr>
+            <th>Station Register Number	</th>
+            <th>Zone</th>
+            <th>District</th>
+            <th>City</th>
+            <th>Pincode</th>
+            <th>Station Name</th>
+            <th>Address</th>
+            <th>E-mail</th>
+            <th>Phone</th>
+            <th>Alternative Phone Number </th>
+            
+        </tr>
+        {% for i in data['view'] %}
+        <tr>
+            <td>{{i['station_reg_num']}}</td>
+            <td>{{i['zone']}}</td>
+            <td>{{i['district']}}</td> 
+            <td>{{i['city']}}</td> 
+            <td>{{i['pincode']}}</td> 
+            <td>{{i['station_name']}}</td> 
+            <td>{{i['address']}}</td> 
+            <td>{{i['email']}}</td> 
+            <td>{{i['phone']}}</td>
+            <td>{{i['alt_phone']}}</td>  
+        </tr>  
+        {% endfor %}
+    </table>     
+
+{% include 'footer.html' %}
+
+
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9fafc;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 20px;
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    .table-container {
+        margin: 30px auto;
+        padding: 20px;
+        max-width: 90%;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    th, td {
+        padding: 15px 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #6bd47b;
+        color: #fff;
+        font-size: 16px;
+    }
+    td {
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #ddd;
+    }
+    tr:last-child td {
+        border-bottom: none;
+    }
+    tr:nth-child(even) td {
+        background-color: #eef7ee;
+    }
+    tr:hover td {
+        background-color: #d4f0d4;
+    }
+    .no-data {
+        text-align: center;
+        color: #7f8c8d;
+        font-size: 18px;
+        padding: 20px;
+    }
+    @media (max-width: 768px) {
+        table {
+            font-size: 14px;
+        }
+        th, td {
+            padding: 12px 8px;
+        }
+    }
+</style>

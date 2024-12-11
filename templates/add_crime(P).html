@@ -1,0 +1,270 @@
+{% include 'police_header.html' %}
+
+<!-- <body>
+    <form action="" method="post">
+        <h1 align="center"><u>ADD CRIME</u></h1>
+        <table align="center">
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" name="F_name"></td>
+            </tr>
+
+            <tr>
+                <th>Last Name</th>
+                <td><input type="text" name="L_name"></td>
+            </tr>
+
+            <tr>
+                <th>Designation</th>
+                <td><input type="text" name="desig"></td>
+            </tr>
+
+            <tr>
+                <th>Case Number</th>
+                <td><input type="text" name="case_num"></td>
+            </tr>
+
+            <tr>
+                <th>Type of crime</th>
+                <td><input type="text" name="ty_of_crime"></td>
+            </tr>
+
+
+            <tr>
+                <th>Latitude</th>
+                <td><input type="text" name="lati"></td>
+            </tr>
+
+            <tr>
+                <th>Longitude</th>
+                <td><input type="text" name="longi"></td>
+            </tr>
+
+            <tr>
+                <th>Status</th>
+                <td><input type="text" name="sta"></td>
+            </tr>
+
+
+            <tr>
+                <td><input type="submit" name="submit"></td>
+            </tr>
+        </table>  -->
+
+
+
+        
+            
+        
+        <body>
+            <div class="card">
+                <form action="" method="post">
+                    <h1 style="margin-top: 100px;">Add Crime</h1>
+                    <table>
+                        <tr>
+                            <th><label for="F_name">First Name</label></th>
+                            <td><input type="text" name="F_name" id="F_name" required maxlength="50"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="L_name">Last Name</label></th>
+                            <td><input type="text" name="L_name" id="L_name" required maxlength="50"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="desig">Designation</label></th>
+                            <td><input type="text" name="desig" id="desig" maxlength="100"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="case_num">Case Number</label></th>
+                            <td><input type="text" name="case_num" id="case_num" required maxlength="20"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="ty_of_crime">Type of Crime</label></th>
+                            <td>
+                                <select name="ty_of_crime" id="ty_of_crime" required>
+                                    <option value="">--Select--</option>
+                                    <option value="Theft">Theft</option>
+                                    <option value="Assault">Assault</option>
+                                    <option value="Fraud">Fraud</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="lati">Latitude</label></th>
+                            <td><input type="number" name="lati" id="lati" step="0.000001" min="-90" max="90" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="longi">Longitude</label></th>
+                            <td><input type="number" name="longi" id="longi" step="0.000001" min="-180" max="180" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="sta">Status</label></th>
+                            <td>
+                                <select name="sta" id="sta" required>
+                                    <option value="">--Select--</option>
+                                    <option value="Open">Open</option>
+                                    <option value="Closed">Closed</option>
+                                    <option value="Under Investigation">Under Investigation</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="text-align: center;">
+                        <input type="submit" name="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        
+                        
+
+{% include 'footer.html' %}
+
+
+<!-- <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        width: 100%;
+        padding: 20px;
+        margin: 20px;
+    }
+    .card h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+    .card table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .card th, .card td {
+        padding: 10px;
+        text-align: left;
+    }
+    .card th {
+        width: 40%;
+        color: #555;
+        font-weight: normal;
+    }
+    .card input, .card select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .card input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .card input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    
+</style> -->
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7fa;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+        text-decoration: underline;
+        margin: 20px 0;
+        font-size: 26px;
+    }
+    form {
+        max-width: 800px;
+        margin: 20px auto;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+    }
+    th, td {
+        text-align: left;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    th {
+        font-weight: bold;
+        color: #34495e;
+        width: 35%;
+    }
+    td {
+        width: 65%;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #bdc3c7;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+        outline: none;
+    }
+    input[type="submit"] {
+        background-color: #3fa057;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 15px;
+        display: block;
+        width: 100%;
+    }
+    input[type="submit"]:hover {
+        background-color: #23803d;
+    }
+    @media (max-width: 768px) {
+        form {
+            padding: 15px;
+        }
+        th, td {
+            display: block;
+            width: 100%;
+            padding: 8px 10;
+        }
+        th {
+            margin-top: 10px;
+        }
+    }
+
+</style>
