@@ -12,6 +12,7 @@ def court_homepage():
 
 
 #request evidence
+print ("anas")
 
 @court.route("/request_evidence")
 def request_evidence():
